@@ -24,6 +24,17 @@ const UPDATE_PROPERTY_TYPE = "UPDATE_PROPERTY_TYPE";
 const UPDATE_CITY = "UPDATE_CITY";
 const UPDATE_PROP = "UPDATE_PROP";
 const UPDATE_FOUND = "UPDATE_FOUND";
+const UPDATE_AGENT = "UPDATE_AGENT";
+const UPDATE_COST = "UPDATE_COST";
+const UPDATE_DOWNPAYMENT = "UPDATE_DOWNPAYMENT";
+const UPDATE_CREDIT = "UPDATE_CREDIT";
+const UPDATE_HISTORY = "UPDATE_HISTORY";
+const UPDATE_ADDRESS1 = "UPDATE_ADDRESS1";
+const UPDATE_ADDRESS2 = "UPDATE_ADDRESS2";
+const UPDATE_ADDRESS3 = "UPDATE_ADDRESS3";
+const UPDATE_FIRST = "UPDATE_FIRST";
+const UPDATE_LAST = "UPDATE_LAST";
+const UPDATE_EMAIL = "UPDATE_EMAIL";
 
 //reducer function
 function reducer(state = initialState, action) {
@@ -54,6 +65,61 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         found: action.payload
+      };
+    case UPDATE_AGENT:
+      return {
+        ...state,
+        agent: action.payload
+      };
+    case UPDATE_COST:
+      return {
+        ...state,
+        cost: action.payload
+      };
+    case UPDATE_DOWNPAYMENT:
+      return {
+        ...state,
+        downpayment: action.payload
+      };
+    case UPDATE_CREDIT:
+      return {
+        ...state,
+        credit: action.payload
+      };
+    case UPDATE_HISTORY:
+      return {
+        ...state,
+        credit: action.payload
+      };
+    case UPDATE_ADDRESS1:
+      return {
+        ...state,
+        address1: action.payload
+      };
+    case UPDATE_ADDRESS2:
+      return {
+        ...state,
+        address2: action.payload
+      };
+    case UPDATE_ADDRESS3:
+      return {
+        ...state,
+        address3: action.payload
+      };
+    case UPDATE_FIRST:
+      return {
+        ...state,
+        first: action.payload
+      };
+    case UPDATE_LAST:
+      return {
+        ...state,
+        last: action.payload
+      };
+    case UPDATE_EMAIL:
+      return {
+        ...state,
+        email: action.payload
       };
     default:
       return state;
@@ -92,6 +158,83 @@ export function updateFound(found) {
   return {
     type: UPDATE_FOUND,
     payload: found
+  };
+}
+
+export function updateAgent(agent) {
+  return {
+    type: UPDATE_AGENT,
+    payload: agent
+  };
+}
+
+export function updateCost(cost) {
+  return {
+    type: UPDATE_COST,
+    payload: cost
+  };
+}
+
+export function updateDownPayment(downpayment) {
+  return {
+    type: UPDATE_DOWNPAYMENT,
+    payload: downpayment
+  };
+}
+
+export function updateCredit(credit) {
+  return {
+    type: UPDATE_CREDIT,
+    payload: credit
+  };
+}
+
+export function updateHistory(history) {
+  return {
+    type: UPDATE_HISTORY,
+    payload: history
+  };
+}
+
+export function updateAddress1(address1) {
+  return {
+    type: UPDATE_ADDRESS1,
+    payload: address1
+  };
+}
+
+export function updateAddress2(address2) {
+  return {
+    type: UPDATE_ADDRESS2,
+    payload: address2
+  };
+}
+
+export function updateAddress3(address3) {
+  return {
+    type: UPDATE_ADDRESS3,
+    payload: address3
+  };
+}
+
+export function updateFirst(first) {
+  return {
+    type: UPDATE_FIRST,
+    payload: first
+  };
+}
+
+export function updateLast(last) {
+  return {
+    type: UPDATE_LAST,
+    payload: last
+  };
+}
+
+export function updateEmail(email) {
+  return {
+    type: UPDATE_EMAIL,
+    payload: email
   };
 }
 
